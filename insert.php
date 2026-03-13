@@ -1,6 +1,6 @@
 <?php
-    mb_internal_encording("utf8");
-    $pdo = new PDO("mysql:dbname=lesson01;host=localhost;","");
+    mb_internal_encoding("utf8");
+    $pdo = new pdo("mysql:dbname=lesson1; host=localhost;","root","");
 
     $sql = "insert into contactform(name, mail, age, comment)values(?,?,?,?)";
     $stmt = $pdo->prepare($sql);
@@ -19,7 +19,7 @@
 <head>
     <meta charset="UTF-8">
     <title>お問い合わせフォーム</title>
-    <linkrei="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
